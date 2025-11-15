@@ -55,6 +55,8 @@ export default function App() {
   };
 
   useEffect(() => {
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
     carregarPergunta();
   }, []);
 
@@ -104,7 +106,6 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
   },
-
   card: {
     backgroundColor: "#1c1c1c",
     width: "90%",
