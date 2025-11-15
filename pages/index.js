@@ -41,7 +41,8 @@ export default function App() {
         setFeedback("✅ Você acertou! (+10 pontos)");
         setPontos((p) => p + 10);
       } else {
-        setFeedback(`❌ Errou! A certa era: ${data.correta}`);
+        setFeedback(`❌ Errou! A certa era: ${data.correta} (-5 pontos)`);
+        setPontos((p) => Math.max(0, p - 5)); // não deixa ficar negativo
       }
 
       setTimeout(() => carregarPergunta(), 2000);
